@@ -1,0 +1,1296 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=El+Messiri:wght@400..700&family=Montserrat:wght@400;600;700;800&family=Noto+Sans+Arabic:wght@100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+* {
+  font-family: "El Messiri", sans-serif;
+  font-weight: 300;
+}
+
+
+.cert-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #f4f8fb;
+  padding: 30px 0;
+}
+
+.cert-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 650px;
+}
+
+/* ====== CERTIFICATE TYPE SELECTOR ====== */
+.cert-type-selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  direction: rtl;
+}
+
+.type-button {
+  padding: 10px 16px;
+  border: 2px solid;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Cairo", sans-serif;
+}
+
+.type-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.type-button.active {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cert-card {
+  width: 650px;
+  background: #f4f8fb;
+  border: 1px solid #bebcbc8a;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  direction: ltr;
+  padding: 10px;
+}
+
+.containerTop {
+  border: #1a1a1a3d 1px solid;
+  box-shadow: #0d0d0d33 0px 4px 8px;
+  padding: 1px;
+  background-image: url('/back1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+}
+
+/* ====== HEADER LOGOS ====== */
+.header-section {
+  direction: rtl;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  padding-left: 23px;
+
+}
+
+.cert-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  padding: 9px 12px 8px 8px;
+  flex-shrink: 0;
+}
+
+.cert-logo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 62px;
+  padding: 0 3px;
+}
+
+.cert-logo-wrapper:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 4px;
+  bottom: 2px;
+  /* Must be a full 1px — sub-pixel widths (e.g. 0.6px) get rounded to 0 on
+     some devices/zoom levels, so the line appears only sometimes. A lighter
+     gray keeps it looking thin/subtle. */
+  width: 1px;
+  background-color: #cfcfcf;
+}
+
+
+
+.cert-logo {
+  flex-shrink: 0;
+}
+
+/* Sizing controls for each individual logo container */
+.cert-logo-wrapper-1 {
+  /* First logo container */
+}
+
+.cert-logo-wrapper-2 {
+  /* Middle logo container */
+}
+
+.cert-logo-wrapper-3 {
+  /* Third logo container */
+}
+
+/* Sizing controls for each individual logo image */
+.cert-logo-1 {
+  height: 64px;
+  width: auto;
+}
+
+.cert-logo-2 {
+  /* You can easily increase/decrease the height/width of the central Balady services logo here */
+  height: 56px;
+  width: 40px;
+  padding-left: 4px;
+  padding-right: 6px;
+}
+
+.cert-logo-3 {
+  height: 61px;
+  width: auto;
+}
+
+/* ====== MAIN TITLE ====== */
+
+.header-color {
+  background: #107475;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Grow to fit the title so it never overflows the box when the intended
+     font isn't loaded and a wider fallback font is used. min-width keeps the
+     original 280px look when the text fits. */
+  width: fit-content;
+  min-width: 280px;
+  box-sizing: border-box;
+  height: 62px;
+  margin-left: -15px;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.cert-main-title,
+.main-title {
+  text-align: center;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 1px;
+  direction: rtl;
+  padding: 18px 10px;
+  margin: 0;
+  font-size: 26px;
+  white-space: nowrap;
+  font-family: 'myTitle', 'El Messiri', sans-serif !important;
+}
+
+.main-subtitle {
+  text-align: center;
+  color: #ffffff;
+  direction: rtl;
+  margin: 0;
+  white-space: nowrap;
+  font-weight: 400;
+  font-family: 'myTitle', 'El Messiri', sans-serif !important;
+}
+
+/* ====== VARIANT: DELIVERY (food delivery via apps) — two-line title ====== */
+.variant-delivery .header-color {
+  width: fit-content;
+  min-width: 300px;
+  height: 62px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 14px;
+}
+
+.variant-delivery .main-title {
+  padding: 0;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.variant-delivery .main-subtitle {
+  font-size: 19px;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+
+
+.variant-delivery .cert-info-grid {
+  align-content: start;
+  gap: 31px 15px;
+}
+
+.variant-delivery .cert-top-section {
+  margin-top: 9px;
+  gap: 0;
+  padding: 0;
+}
+
+.variant-delivery .cert-left {
+  width: 150px;
+  gap: 10px;
+  padding-right: 0;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  justify-content: flex-start;
+}
+
+.variant-delivery .cert-photo-box {
+  width: 125px;
+  height: 125px;
+  border-color: rgb(65, 137, 169);
+}
+
+.variant-delivery .cert-qr-box {
+  width: 125px !important;
+  height: 125px !important;
+  /* Match the unified certificate's QR box exactly (base green border). */
+  border-color: #82b74b;
+}
+
+.variant-delivery .cert-right {
+  padding-right: 10px;
+  flex: 1;
+  min-width: 400px;
+  min-height: 210px;
+}
+
+.variant-delivery .cert-name {
+  margin: 22px 0 15px 0;
+}
+
+.variant-basic .cert-info-grid {
+  align-content: start;
+  gap: 30px 15px;
+}
+
+/* ====== TOP SECTION (Left + Right) ====== */
+.cert-top-section {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  padding: 4px;
+  flex: 1;
+}
+
+/* ====== LEFT SIDE (PHOTO + QR) ====== */
+.cert-left {
+  width: 160px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding-right: 14px;
+}
+
+.cert-photo-box {
+  width: 125px;
+  height: 125px;
+  border: 1px solid #82b74b;
+  background: none;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-photo {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  display: block;
+  box-sizing: border-box;
+}
+
+.cert-qr-box {
+  width: 125px;
+  height: 125px;
+  border: 1Px solid #82b74b;
+  background: #f1f1f0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.cert-qr-box img,
+.cert-qr-box canvas,
+.cert-qr-box svg {
+  width: 125px !important;
+  height: 125px !important;
+  object-fit: contain;
+  padding: 15px;
+  display: block;
+}
+
+/* ====== RIGHT SIDE INFORMATION ====== */
+.cert-right {
+  flex: 1;
+  min-width: 0;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 0;
+  padding-right: 10px;
+  min-height: 230px;
+}
+
+.cert-name {
+  color: #099396;
+  margin: 4px 0 10px 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+  display: block;
+}
+
+.cert-name-en {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 6px;
+}
+
+.cert-name-ar {
+  font-family: "Cairo", "Tajawal", "Noto Sans Arabic", sans-serif;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+/* ===== GRID OF INFO - 2 COLUMNS ===== */
+.cert-info-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-content: space-between;
+  direction: rtl;
+  gap: 4px 10px;
+  flex: 1;
+  min-height: 0;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 2px;
+  text-align: right;
+  margin: 0;
+}
+
+.info-row span {
+  font-weight: 700;
+  font-size: 10.5px;
+  color: #2a2a2a;
+  letter-spacing: 0.3px;
+  margin-bottom: 2px;
+  display: block;
+  font-family: "Cairo", sans-serif;
+  text-transform: none;
+}
+
+.info-row p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: #ffffff;
+  padding: 4px 10px;
+  min-height: 26px;
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+}
+
+/* ====== VARIANT: BASIC CERTIFICATE CUSTOMIZATIONS ====== */
+/* Logos & header use the shared base styles so they match the health certificate. */
+
+.variant-basic .cert-top-section {
+  margin-top: 9px;
+  gap: 0;
+  padding: 0;
+}
+
+.variant-basic .cert-left {
+  width: 150px;
+  gap: 10px;
+  padding-right: 0;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  justify-content: flex-start;
+}
+
+.variant-basic .cert-photo-box {
+  width: 125px;
+  height: 125px;
+}
+
+.variant-basic .cert-qr-box {
+  width: 125px !important;
+  height: 125px !important;
+}
+
+.variant-basic .cert-right {
+  padding-right: 10px;
+  flex: 1;
+  min-width: 400px;
+  min-height: 210px;
+}
+
+.variant-basic .cert-name {
+  margin: 22px 0 15px 0;
+}
+
+/* Inputs (grid, labels and value boxes) use the shared base styles so they
+   match the delivery variant. The grid is set above alongside delivery. */
+
+/* ====== LINKS SECTION ====== */
+.links {
+  border-bottom: 1.5px solid #1074758c;
+  border-right: 1.5px solid #1074758c;
+  border-radius: 0px 1px 25px 0px;
+  direction: rtl;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #107475;
+}
+
+.link-text {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  color: #1b4c50;
+  /* DARK BLUEish Teal */
+}
+
+.num {
+  font-size: 18px;
+  font-weight: 800;
+  color: #555c5c;
+  margin: 0 1px;
+  letter-spacing: -0.5px;
+}
+
+.label {
+  font-size: 9px;
+  font-weight: 800;
+  color: #333;
+}
+
+.footer-line-divider {
+  width: 1px;
+  height: 30px;
+  border-right: 1px dotted #ccc;
+  margin: 0 2px;
+}
+
+.icon-social-group {
+  display: flex;
+  gap: 4px;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #82b74b;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  color: #82b74b;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+.tel .icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #82b74b;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  color: #82b74b;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+.icon-wrapper svg {
+  display: block;
+}
+
+.icon-globe {
+  font-size: 14px;
+}
+
+.icon-globe {
+  font-size: 15px;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1.5px solid #82b74b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #82b74b;
+  flex-shrink: 0;
+  font-size: 5px;
+}
+
+.circle2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.6px solid #82b74b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #82b74b;
+  flex-shrink: 0;
+  font-size: 5px;
+}
+
+.circle2 svg {
+  width: 12px;
+  height: 12px;
+  color: #82b74b;
+}
+
+.circle svg {
+  width: 10px;
+  height: 10px;
+  color: #82b74b;
+}
+
+
+/* ====== FOOTER SECTION ====== */
+.cert-footer {
+  border: #1a1a1a3d 1px solid;
+  box-shadow: #0d0d0d33 0px 4px 8px;
+  padding: 10px;
+  margin-top: 20px;
+  direction: rtl;
+  min-height: 350px;
+  width: 100%;
+  color: white;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-footer-watermark {
+  position: absolute;
+  top: -55px;
+  left: -60px;
+  width: 280px;
+  height: 280px;
+  opacity: 0.15;
+  transform: scaleX(-1);
+  pointer-events: none;
+  z-index: 0;
+  object-fit: contain;
+}
+
+/* ====== CERT FOOTER SECTION (RENAMED TO MATCH JSX) ====== */
+.cert-footer {
+  width: 630px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-footer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  /* Gap: 10px */
+  border-bottom: none;
+  /* Removed border */
+  padding-bottom: 0;
+  /* Remove padding if border is gone */
+  direction: rtl;
+}
+
+/* Common style for all footer images to remove black background */
+.cert-footer-logo,
+.cert-footer-text-logo,
+.palm-icon,
+.cert-star-icon {
+  mix-blend-mode: screen;
+}
+
+.cert-footer-logos {
+  display: flex;
+  align-items: center;
+}
+
+.cert-footer-logo {
+  height: 50px;
+  object-fit: contain;
+}
+
+.cert-footer-palm {
+  background: transparent;
+  border-radius: 50%;
+  width: 65px;
+  /* Increased slightly */
+  height: 65px;
+  /* Increased slightly */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -10px;
+  /* Shift right towards text */
+}
+
+.palm-icon {
+  width: 80px;
+  /* Increased from 45px */
+  height: 80px;
+  /* Increased from 45px */
+}
+
+.cert-footer-text-logo {
+  width: 188px;
+  height: 35px;
+  margin-top: 18px;
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+
+.cert-footer-title {
+  font-size: 32px;
+  /* Increased from 24px */
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+  /* Reduced from 700 */
+  margin: 0;
+  color: white;
+  white-space: nowrap;
+}
+
+.cert-footer-content {
+  display: flex;
+  flex-direction: column;
+  padding: 7px 11px 9px;
+  direction: rtl;
+}
+
+.cert-instruction-item-block {
+  position: relative;
+  width: 100%;
+  padding-right: 30px;
+  box-sizing: border-box;
+  margin-bottom: 4px;
+}
+
+.cert-star-icon-abs {
+  position: absolute;
+  right: 0;
+  top: 4px;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+
+.cert-instruction-text {
+  margin: 0 5px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.8;
+  font-family: "Cairo", sans-serif !important;
+  color: white;
+  text-align: right;
+  direction: rtl;
+  width: 100%;
+}
+
+/* Delivery variant: keep the "food establishments" instruction (3rd item)
+   on a single line. Cairo renders wider than the fallback and wraps it at
+   21px, so trim it slightly and force one line. Other instructions (incl.
+   the longer 4th one) are unaffected and still wrap normally. */
+.variant-delivery .cert-instruction-item-block:nth-child(3) .cert-instruction-text {
+  white-space: nowrap;
+}
+
+
+
+/* ====== ACTION BUTTONS ====== */
+.cert-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 20px;
+}
+
+.cert-actions button {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.2);
+}
+
+
+
+.cert-actions button:last-child {
+  background: #666;
+  box-shadow: 0 4px 12px rgba(102, 102, 102, 0.2);
+}
+
+.cert-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(26, 26, 26, 0.3);
+}
+
+.cert-actions button:last-child:hover {
+  background: #888;
+  box-shadow: 0 8px 20px rgba(102, 102, 102, 0.3);
+}
+
+/* ====== PRINT & PDF GENERATION STYLES ====== */
+@media print {
+
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .cert-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: white !important;
+    width: 297mm !important;
+    height: auto !important;
+  }
+
+  .cert-actions {
+    display: none !important;
+  }
+
+  .cert-type-selector {
+    display: none !important;
+  }
+
+  .cert-wrapper {
+    width: 297mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .cert-card {
+    width: 297mm !important;
+    height: auto !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  /* ===== PAGE 1 - Full certificate content ===== */
+  .containerTop {
+    width: 297mm !important;
+    height: 210mm !important;
+    page-break-after: always !important;
+    page-break-before: auto !important;
+    page-break-inside: avoid !important;
+    break-after: page !important;
+    break-before: auto !important;
+    break-inside: avoid !important;
+    background-image: url('/back1.png') !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    border: 1px solid #1a1a1a3d !important;
+    overflow: hidden !important;
+  }
+
+  /* Scale internal content to fit */
+  .header-section {
+    transform-origin: top right;
+    width: 100% !important;
+  }
+
+  .cert-header {
+    gap: 8px !important;
+  }
+
+  .cert-logo {
+    width: 100px !important;
+  }
+
+  .line {
+    height: 85px !important;
+  }
+
+  .main-title {
+    font-size: 52px !important;
+    padding: 8px 12px !important;
+  }
+
+  .cert-top-section {
+    flex: 1;
+    display: flex !important;
+    gap: 15px !important;
+  }
+
+  .cert-left {
+    width: 270px !important;
+  }
+
+  .cert-photo-box,
+  .cert-qr-box {
+    width: 270px !important;
+    height: 270px !important;
+    padding: 0 !important;
+    background: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-width: 2px !important;
+  }
+
+  .cert-photo {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .cert-qr-box img,
+  .cert-qr-box canvas,
+  .cert-qr-box svg {
+    width: 270px !important;
+    height: 270px !important;
+  }
+
+  .cert-right {
+    flex: 1 !important;
+    max-height: none !important;
+  }
+
+  .cert-name {
+    font-weight: 500 !important;
+    letter-spacing: 0px !important;
+    margin: 0 0 5px 0 !important;
+  }
+
+  .cert-info-grid {
+    gap: 5px 8px !important;
+  }
+
+  .info-row {
+    padding: 0 8px !important;
+    font-size: 42px !important;
+  }
+
+  .info-row span {
+    font-size: 24px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .info-row p {
+    font-size: 24px !important;
+    min-height: 28px !important;
+    padding: 3px 8px !important;
+  }
+
+  .links {
+    padding-right: 25px !important;
+    border-bottom: 1.5px solid #107475;
+    border-right: 1.5px solid #107475;
+    border-radius: 0px 2px 32px 0px !important;
+    gap: 20px !important;
+  }
+
+  .links div {
+    font-size: 20px !important;
+    gap: 13px !important;
+  }
+
+  .circle {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .circle svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .circle2 {
+    width: 43px !important;
+    height: 43px !important;
+  }
+
+  .circle2 svg {
+    width: 29px !important;
+    height: 29px !important;
+  }
+
+  .num {
+    font-size: 37px !important;
+  }
+
+  .title2 {
+    font-size: 22px !important;
+    margin-left: 10px !important;
+  }
+
+  /* ===== PAGE 2 - Footer only ===== */
+  .cert-footer {
+    width: 297mm !important;
+    min-height: 210mm !important;
+    max-height: 210mm !important;
+    height: 210mm !important;
+    page-break-before: always !important;
+    page-break-after: auto !important;
+    page-break-inside: avoid !important;
+    break-before: page !important;
+    break-after: auto !important;
+    break-inside: avoid !important;
+    background-image: url('/back2.png.jpeg') !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 1px solid #1a1a1a3d !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .cert-footer-watermark {
+    display: block !important;
+    width: 280px !important;
+    height: 280px !important;
+    opacity: 0.15 !important;
+  }
+
+  .cert-instruction-text {
+    font-size: 17px !important;
+    line-height: 1.1 !important;
+  }
+
+  .cert-footer-content {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+}
+
+/* New Health Certificate Specific Styles */
+.health-certificate-mode {
+  background: white !important;
+  font-family: 'Cairo', sans-serif !important;
+}
+
+.health-certificate-mode .header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.header-color-block {
+  background: #00605A;
+  /* Dark Teal from Image */
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.header-color-block h1 {
+  color: white !important;
+  font-size: 32px !important;
+  margin: 0;
+  font-weight: 700;
+}
+
+.cert-logos-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 15px;
+}
+
+.cert-logo-new {
+  height: 60px;
+  object-fit: contain;
+}
+
+.cert-main-content {
+  padding: 0 10px;
+}
+
+.cert-content-top-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.worker-name-en {
+  color: #55A8A9;
+  /* Light blue/teal for name */
+  font-size: 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cert-grid-and-images {
+  display: flex;
+  gap: 20px;
+  direction: ltr;
+  /* To put images on the left in the container */
+}
+
+.cert-images-column {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.worker-photo-container,
+.qr-code-container {
+  width: 160px;
+  height: 160px;
+  border: 1px solid #82B74B;
+  /* Green border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.worker-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-data-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px 10px;
+  direction: rtl;
+  /* Data is RTL */
+}
+
+.data-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+}
+
+.field-value-box {
+  background: #F8F9FA;
+  /* Light grey box */
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.cert-footer-links-row {
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: rtl;
+}
+
+.footer-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-link-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1b4c50;
+  font-family: Arial, sans-serif;
+}
+
+.footer-icon-circle {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #82B74B;
+  border-radius: 50%;
+  color: #82B74B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.footer-icons-group {
+  display: flex;
+  gap: 5px;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 30px;
+  border-right: 1px dotted #ccc;
+}
+
+.phone-area .footer-label-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: #333;
+}
+
+.phone-area .footer-phone-num {
+  font-size: 24px;
+  font-weight: 800;
+  color: #555;
+}
+
+.phone-area .phone-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+}
+
+/* ====== MOBILE RESPONSIVENESS ====== */
+@media screen and (max-width: 768px) {
+  .cert-container {
+    overflow-x: hidden;
+    padding: 15px 0;
+  }
+
+  .cert-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  body:not(.pdf-printing) .cert-card {
+    zoom: 0.53 !important;
+  }
+}
+@media screen and (min-width: 381px) and (max-width: 415px) {
+  body:not(.pdf-printing) .cert-card {
+    zoom: 0.58 !important;
+  }
+}
+@media screen and (min-width: 416px) and (max-width: 450px) {
+  body:not(.pdf-printing) .cert-card {
+    zoom: 0.63 !important;
+  }
+}
+@media screen and (min-width: 451px) and (max-width: 500px) {
+  body:not(.pdf-printing) .cert-card {
+    zoom: 0.70 !important;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 600px) {
+  body:not(.pdf-printing) .cert-card {
+    zoom: 0.78 !important;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 660px) {
+  body:not(.pdf-printing) .cert-card {
+    zoom: 0.90 !important;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .cert-actions {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+@media print {
+  body .cert-card {
+    zoom: 1 !important;
+  }
+}
+
+/* Force 1:1 scale during PDF generation to prevent text-wrap bugs */
+body.pdf-printing .cert-wrapper {
+  transform: none !important;
+  width: 650px !important;
+}
+
+body.pdf-printing .cert-container {
+  padding: 0 !important;
+}

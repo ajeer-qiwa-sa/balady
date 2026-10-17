@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;700&display=swap');
+
+.add-certificate-container {
+  min-height: 100vh;
+  background: #f0f2f5;
+  padding: 40px 20px;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  direction: rtl;
+}
+
+.add-certificate-header {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.add-certificate-header h2 {
+  font-size: 28px;
+  color: #1f2937;
+  margin: 0;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.add-certificate-header h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #10b981;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.add-certificate-form {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.add-certificate-form>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-certificate-form label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.add-certificate-form input,
+.add-certificate-form select {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  transition: all 0.2s ease;
+  background-color: #f9fafb;
+  box-sizing: border-box;
+  color: #1f2937;
+}
+
+.add-certificate-form select option {
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+.add-certificate-form input:focus,
+.add-certificate-form select:focus {
+  outline: none;
+  border-color: #10b981;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.add-certificate-form input::placeholder {
+  color: #9ca3af;
+}
+
+/* Make full width fields */
+.add-certificate-form>div:has(input[type="file"]),
+.add-certificate-btn-group {
+  grid-column: 1 / -1;
+}
+
+.add-certificate-btn {
+  width: 100%;
+  padding: 14px;
+  background: #10b981;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 20px;
+  grid-column: 1 / -1;
+}
+
+.add-certificate-btn:hover {
+  background: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.add-certificate-btn:active {
+  transform: translateY(0);
+}
+
+/* File Input Styling */
+.add-certificate-form input[type="file"] {
+  height: auto;
+  padding: 10px;
+  border: 2px dashed #e5e7eb;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.add-certificate-form input[type="file"]:hover {
+  border-color: #10b981;
+}
+
+/* Logo Image Styling */
+.add-certificate-form img {
+  margin-top: 12px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid #e5e7eb !important;
+  padding: 8px !important;
+  background: #fff !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-certificate-container {
+    padding: 20px 16px;
+  }
+
+  .add-certificate-form {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .add-certificate-header h2 {
+    font-size: 24px;
+  }
+}

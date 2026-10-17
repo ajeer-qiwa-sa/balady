@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Official Saudi Green Background -->
+  <rect width="900" height="600" fill="#165B33"/>
+  
+  <!-- Shahada (Calligraphy) -->
+  <g fill="#FFFFFF" font-family="'Traditional Arabic', 'Amiri', 'Times New Roman', serif" font-weight="bold">
+    <!-- Top line: La ilaha illa Allah -->
+    <!-- Using a large font size to mimic calligraphy -->
+    <text x="450" y="250" font-size="140" text-anchor="middle" letter-spacing="-5" style="direction: rtl;">لا إله إلا الله</text>
+    
+    <!-- Bottom line: Muhammad Rasul Allah -->
+    <text x="450" y="380" font-size="110" text-anchor="middle" letter-spacing="-3" style="direction: rtl;">محمد رسول الله</text>
+  </g>
+  
+  <!-- Sword (Traditional Scimitar) -->
+  <!-- Handle on Right, Tip on Left -->
+  <g fill="#FFFFFF" transform="translate(0, 50)">
+    <!-- Hilt (Handle) - Right Side (around x=700) -->
+    <path d="M 680 400 L 700 400 Q 710 400 710 410 L 710 430 Q 710 440 700 440 L 680 440 L 680 400 Z"/>
+    
+    <!-- Pommel (Ball at end of handle) -->
+    <circle cx="710" cy="420" r="15"/>
+    
+    <!-- Cross Guard -->
+    <rect x="660" y="390" width="20" height="60" rx="5"/>
+    
+    <!-- Blade - Long, Straight, Curved Tip -->
+    <path d="M 660 410 L 200 410 Q 150 410 140 430 Q 150 440 200 440 L 660 440 Z"/>
+    
+    <!-- Decoration on Hilt -->
+    <circle cx="710" cy="420" r="8" fill="#165B33"/>
+  </g>
+</svg>
